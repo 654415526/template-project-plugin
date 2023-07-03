@@ -47,7 +47,7 @@ public class DependComponent extends JFrame {
         JPanel jPanel = new JPanel(new FlowLayout(FlowLayout.LEFT));
         jPanel.add(new JLabel("Pixel-base Version"));
         jxComboBox = new JXComboBox(new String[]{"1.0.2", "1.0.4"});
-        jxComboBox.setSelectedItem("1.0.2");
+        jxComboBox.setSelectedItem("1.0.4");
         jPanel.add(jxComboBox);
         jPanel.setPreferredSize(new Dimension(780, 50));
         mainPanel.add(jPanel);
@@ -75,13 +75,6 @@ public class DependComponent extends JFrame {
         JScrollPane leftScrollPane = new JBScrollPane(leftPanel);
         leftScrollPane.setVerticalScrollBarPolicy(JScrollPane.VERTICAL_SCROLLBAR_ALWAYS);
 
-        for (DependInfoModel dependInfoModel : list) {
-            JCheckBox jCheckBox = new JCheckBox(dependInfoModel.getName());
-            jCheckBox.setName(dependInfoModel.getKey());
-            jCheckBox.addItemListener(createItemListener());
-            leftPanel.add(jCheckBox);
-        }
-
         jPanel.add(leftScrollPane);
 
         rightPanel = new JPanel(new GridLayout(15,1));
@@ -92,6 +85,16 @@ public class DependComponent extends JFrame {
         rightScrollPane.setVerticalScrollBarPolicy(JScrollPane.VERTICAL_SCROLLBAR_ALWAYS);
 
         jPanel.add(rightScrollPane);
+
+        for (DependInfoModel dependInfoModel : list) {
+            JCheckBox jCheckBox = new JCheckBox(dependInfoModel.getName());
+            jCheckBox.setName(dependInfoModel.getKey());
+            jCheckBox.addItemListener(createItemListener());
+            leftPanel.add(jCheckBox);
+            if (dependInfoModel.getSelected()) {
+                jCheckBox.setSelected(Boolean.TRUE);
+            }
+        }
 
         jPanel.setPreferredSize(new Dimension(780, 400));
         mainPanel.add(jPanel);
