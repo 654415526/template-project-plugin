@@ -1,0 +1,1 @@
+org.springframework.boot.autoconfigure.EnableAutoConfiguration=${packageName}.starter.${upperFirsts(name)}Starter
