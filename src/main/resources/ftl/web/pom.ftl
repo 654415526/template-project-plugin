@@ -73,7 +73,7 @@
                 <version>${r'${spring.boot.version}'}</version>
                 <configuration>
                     <includeSystemScope>true</includeSystemScope>
-                    <mainClass>${packageName}.web.${name?cap_first}Application</mainClass>
+                    <mainClass>${packageName}.web.${upperFirsts(name)}Application</mainClass>
                 </configuration>
                 <executions>
                     <execution>
