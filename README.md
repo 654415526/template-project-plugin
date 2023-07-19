@@ -3,6 +3,8 @@
 # 插件安装
 1.下载插件
 [template-project-plugin-1.0.0-RELEASE.zip](https://yb1k37.yuque.com/attachments/yuque/0/2023/zip/28882781/1688448272180-8bc20b5d-113c-4473-b3ca-a99e2d454808.zip)
+
+
 2.安装插件
 plugins->setting->Install Plugin from Disk...
 ![image.png](https://cdn.nlark.com/yuque/0/2023/png/28882781/1688355251654-faf43751-06ca-4178-9785-79e15a137578.png#averageHue=%23393c41&clientId=u6a1272bd-84de-4&from=paste&height=707&id=u37d9a732&originHeight=1414&originWidth=1956&originalType=binary&ratio=2&rotation=0&showTitle=false&size=396438&status=done&style=none&taskId=uc96332b0-5ea3-491b-be92-3451080265b&title=&width=978)
